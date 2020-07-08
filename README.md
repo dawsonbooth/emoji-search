@@ -1,10 +1,10 @@
-# `PACKAGE_NAME`
+# `emoji-search`
 
-[![](https://img.shields.io/pypi/v/PACKAGE_NAME.svg?style=flat)](https://pypi.org/pypi/PACKAGE_NAME/)
-[![](https://img.shields.io/pypi/dw/PACKAGE_NAME.svg?style=flat)](https://pypi.org/pypi/PACKAGE_NAME/)
-[![](https://img.shields.io/pypi/pyversions/PACKAGE_NAME.svg?style=flat)](https://pypi.org/pypi/PACKAGE_NAME/)
-[![](https://img.shields.io/pypi/format/PACKAGE_NAME.svg?style=flat)](https://pypi.org/pypi/PACKAGE_NAME/)
-[![](https://img.shields.io/pypi/l/PACKAGE_NAME.svg?style=flat)](https://github.com/dawsonbooth/PACKAGE_NAME/blob/master/LICENSE)
+[![](https://img.shields.io/pypi/v/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
+[![](https://img.shields.io/pypi/dw/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
+[![](https://img.shields.io/pypi/pyversions/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
+[![](https://img.shields.io/pypi/format/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
+[![](https://img.shields.io/pypi/l/emoji-search.svg?style=flat)](https://github.com/dawsonbooth/emoji-search/blob/master/LICENSE)
 
 # Description
 
@@ -15,7 +15,7 @@ This is a short or long textual description of the package.
 With [Python](https://www.python.org/downloads/) installed, simply run the following command to add the package to your project.
 
 ```bash
-pip install PACKAGE_NAME
+pip install emoji-search
 ```
 
 # Usage
