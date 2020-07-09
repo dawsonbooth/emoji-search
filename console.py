@@ -1,28 +1,31 @@
 import argparse
-from emoji import Emoji, search, palette, category
 import json
+
+from emoji import Emoji, all, category, search
 
 
 def main():
     parser = argparse.ArgumentParser(
         description='Search for emoji information')
-    parser.add_argument('--search', type=str, required=False, default="",
-                        help='Emoji to search for')
-    parser.add_argument('--category', type=str, required=False, default="",
-                        help='Category of emojis')
-    parser.add_argument('--palette', required=False, action='store_true', default=False,
-                        help='Palette of emojis')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--search', type=str, required=False, default="",
+                       help='Emoji to search for')
+    group.add_argument('--category', type=str, required=False, default="",
+                       help='Category to get list of emojis')
+    group.add_argument('--all', required=False, action='store_true', default=False,
+                       help='Get palette of all categories and their emojis')
 
     args = parser.parse_args()
 
-    try:
-        if args.search:
-            print(json.dumps(dict(search(args.search)), ensure_ascii=False))
-        elif args.category:
-            print(category(args.category))
-        elif args.palette:
-            print(json.dumps(dict(palette()), ensure_ascii=False))
-        else:
-            raise Exception()
-    except:
+    if args.search:
+        print(json.dumps(dict(search(args.search)), ensure_ascii=False))
+    elif args.category:
+        print(category(args.category))
+    elif args.all:
+        print(json.dumps(dict(all()), ensure_ascii=False))
+    else:
         parser.error("Invalid command")
+
+
+if __name__ == "__main__":
+    main()
