@@ -17,9 +17,9 @@ def main():
 
     try:
         if args.search:
-            print(json.dumps(dict(search(args.keyword)), ensure_ascii=False))
+            print(json.dumps(dict(search(args.search)), ensure_ascii=False))
         elif args.category:
-            print(category(args.keyword))
+            print(category(args.category))
         elif args.palette:
             print(json.dumps(dict(palette()), ensure_ascii=False))
         else:

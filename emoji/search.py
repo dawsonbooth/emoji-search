@@ -8,16 +8,9 @@ from .emoji import Emoji
 
 def search(emoji: str) -> dict:
     emoji_url = f"https://emojipedia.org/{urllib.parse.quote(emoji)}"
-    try:
-        page = requests.get(emoji_url)
-    except:
-        print("Connection error")
-        exit()
-    try:
-        soup = BeautifulSoup(page.content, 'lxml')
-    except:
-        print("Could not parse page content")
-        exit()
+    
+    page = requests.get(emoji_url)
+    soup = BeautifulSoup(page.content, 'lxml')
 
     # Name
     name: str
