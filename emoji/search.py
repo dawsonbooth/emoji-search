@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup, SoupStrainer
 import requests
 import urllib.parse
 
+from .emoji import Emoji
+
 
 def search(emoji: str) -> dict:
     emoji_url = f"https://emojipedia.org/{urllib.parse.quote(emoji)}"
@@ -85,4 +87,4 @@ def search(emoji: str) -> dict:
         'vendors': vendors
     }
 
-    return emoji_info
+    return Emoji(**emoji_info)
