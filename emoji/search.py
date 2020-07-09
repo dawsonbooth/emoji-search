@@ -3,12 +3,33 @@ from bs4 import BeautifulSoup, SoupStrainer
 import requests
 import urllib.parse
 
-from .emoji import Emoji
+from .emoji import Emoji, categories
+
+
+def category(category: str) -> List[str]:
+    emoji_url = f"https://emojipedia.org/{category}"
+
+    page = requests.get(emoji_url)
+    soup = BeautifulSoup(page.content, 'lxml')
+
+    emojis: List[str]
+    try:
+        ul = soup.find('ul', class_="emoji-list")
+        spans = ul.find_all('span', class_='emoji')
+        emojis = [span.get_text() for span in spans]
+    except:
+        emojis = list()
+
+    return emojis
+
+
+def palette() -> dict:
+    return dict([(c, category(c)) for c in categories])
 
 
 def search(emoji: str) -> dict:
     emoji_url = f"https://emojipedia.org/{urllib.parse.quote(emoji)}"
-    
+
     page = requests.get(emoji_url)
     soup = BeautifulSoup(page.content, 'lxml')
 
