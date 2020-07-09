@@ -3,7 +3,7 @@ from emoji import Emoji, search, palette, category
 import json
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(
         description='Search for emoji information')
     parser.add_argument('--search', type=str, required=False, default="",
