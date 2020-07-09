@@ -1,7 +1,8 @@
-from typing import List, Dict
-from bs4 import BeautifulSoup, SoupStrainer
-import requests
 import urllib.parse
+from typing import Dict, List
+
+import requests
+from bs4 import BeautifulSoup, SoupStrainer
 
 from .emoji import Emoji, categories
 
@@ -23,7 +24,7 @@ def category(category: str) -> List[str]:
     return emojis
 
 
-def palette() -> dict:
+def all() -> dict:
     return dict([(c, category(c)) for c in categories])
 
 

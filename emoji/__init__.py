@@ -1,5 +1,4 @@
 from .emoji import Emoji
-from .palette import category, palette
-from .search import search
+from .search import all, category, search
 
-__all__ = ['Emoji', 'category', 'palette', 'search']
+__all__ = ['Emoji', 'category', 'all', 'search']
