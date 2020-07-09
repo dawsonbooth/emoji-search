@@ -17,6 +17,9 @@ classifiers = [
 include = [
     "LICENSE",
 ]
+packages = [
+    { include = "emoji" },
+]
 
 [tool.poetry.scripts]
 emoji-search = 'console:main'
