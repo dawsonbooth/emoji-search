@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "emoji-search"
-version = "1.0.1"
+version = "1.0.2"
 description = "The #1 Python tool for miscellaneous emoji info"
 authors = ["Dawson Booth <pypi@dawsonbooth.com>"]
 license = "MIT"
