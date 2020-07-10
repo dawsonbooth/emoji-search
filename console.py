@@ -1,7 +1,7 @@
 import argparse
 import json
 
-from emoji import Emoji, category, palette, search
+from emoji import Emoji, categories, category, palette, search
 
 
 def main():
@@ -25,6 +25,8 @@ def main():
         print(category(args.category))
     elif args.palette:
         print(json.dumps(dict(palette()), ensure_ascii=False))
+    elif args.categories:
+        print(categories)
     else:
         parser.error("Invalid command")
 
