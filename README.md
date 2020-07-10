@@ -1,14 +1,15 @@
 # `emoji-search`
 
+
 [![](https://img.shields.io/pypi/v/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
 [![](https://img.shields.io/pypi/dw/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
 [![](https://img.shields.io/pypi/pyversions/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
 [![](https://img.shields.io/pypi/format/emoji-search.svg?style=flat)](https://pypi.org/pypi/emoji-search/)
 [![](https://img.shields.io/pypi/l/emoji-search.svg?style=flat)](https://github.com/dawsonbooth/emoji-search/blob/master/LICENSE)
 
-# Description
 
-The #1 Python tool for miscellaneous emoji info
+*The #1 Python tool for miscellaneous emoji info*
+
 
 # Installation
 
@@ -34,8 +35,8 @@ print(random_emoji())
 
 You can also run the tool from the command-line:
 
-```bash
-usage: console.py [-h] [--search SEARCH | --category CATEGORY | --categories | --all]
+```txt
+usage: console.py [-h] [--search SEARCH | --category CATEGORY | --categories | --palette]
 
 Search for emoji information
 
@@ -44,7 +45,7 @@ optional arguments:
   --search SEARCH      Emoji to search for
   --category CATEGORY  Category to get list of emojis
   --categories         Get list of emoji categories
-  --all                Get palette of all categories and their emojis
+  --palette            Get JSON object of all categories and their emojis
 ```
 
 ```bash
@@ -54,7 +55,7 @@ Then check out all the information!
 
 ```json
 {
-  "emoji": "🎈",
+  "symbol": "🎈",
   "description": "A balloon on a string, as decorates a birthday party. Generally depicted in red, though WhatsApp’s is pink and Google’s orangish-red.\nCommonly used to convey congratulations and celebration, especially when wishing someone a happy birthday.\nMicrosoft and Samsung's balloons were previously blue; SoftBank's was shown floating in the sky.\n\nBalloon was approved as part of Unicode 6.0 in 2010\nand added to Emoji 1.0 in 2015.\n",
   "name": "Balloon",
   "aliases": ["Party", "Red Balloon"],

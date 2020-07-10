@@ -24,7 +24,7 @@ def category(category: str) -> List[str]:
     return symbols
 
 
-def all() -> dict:
+def palette() -> dict:
     return dict([(c, category(c)) for c in categories])
 
 

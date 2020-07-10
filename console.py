@@ -1,7 +1,7 @@
 import argparse
 import json
 
-from emoji import Emoji, all, category, search
+from emoji import Emoji, category, palette, search
 
 
 def main():
@@ -14,8 +14,8 @@ def main():
                        help='Category to get list of emojis')
     group.add_argument('--categories', required=False, action='store_true', default=False,
                        help='Get list of emoji categories')
-    group.add_argument('--all', required=False, action='store_true', default=False,
-                       help='Get palette of all categories and their emojis')
+    group.add_argument('--palette', required=False, action='store_true', default=False,
+                       help='Get JSON object of all categories and their emojis')
 
     args = parser.parse_args()
 
@@ -23,8 +23,8 @@ def main():
         print(json.dumps(dict(search(args.search)), ensure_ascii=False))
     elif args.category:
         print(category(args.category))
-    elif args.all:
-        print(json.dumps(dict(all()), ensure_ascii=False))
+    elif args.palette:
+        print(json.dumps(dict(palette()), ensure_ascii=False))
     else:
         parser.error("Invalid command")
 
