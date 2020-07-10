@@ -13,15 +13,15 @@ def category(category: str) -> List[str]:
     page = requests.get(emoji_url)
     soup = BeautifulSoup(page.content, 'lxml')
 
-    emojis: List[str]
+    symbols: List[str]
     try:
         ul = soup.find('ul', class_="emoji-list")
         spans = ul.find_all('span', class_='emoji')
-        emojis = [span.get_text() for span in spans]
+        symbols = [span.get_text() for span in spans]
     except:
-        emojis = list()
+        symbols = list()
 
-    return emojis
+    return symbols
 
 
 def all() -> dict:
@@ -35,11 +35,14 @@ def search(emoji: str) -> dict:
     soup = BeautifulSoup(page.content, 'lxml')
 
     # Name
+    symbol: str
     name: str
     try:
-        name = soup.find('article').find(
-            'h1').get_text().replace(f"{emoji} ", "")
+        heading = soup.find('article').find('h1').get_text()
+        symbol = heading[0]
+        name = heading[2:]
     except:
+        symbol = ""
         name = ""
 
     # Description
@@ -55,7 +58,7 @@ def search(emoji: str) -> dict:
     aliases: List[str]
     try:
         section_aliases = soup.find('section', class_="aliases")
-        aliases = [li.get_text().replace(f"{emoji} ", "")
+        aliases = [li.get_text().replace(f"{symbol} ", "")
                    for li in section_aliases.find('ul').find_all('li')]
     except:
         aliases = list()
@@ -65,7 +68,7 @@ def search(emoji: str) -> dict:
     try:
         section_applenames = soup.find('section', class_="applenames")
         apple_name = section_applenames.find(
-            'p').get_text().replace(f"{emoji} ", "")
+            'p').get_text().replace(f"{symbol} ", "")
     except:
         apple_name = ""
 
@@ -74,7 +77,7 @@ def search(emoji: str) -> dict:
     try:
         section_unicodenames = soup.find('section', class_="unicodename")
         unicode_name = section_unicodenames.find(
-            'p').get_text().replace(f"{emoji} ", "")
+            'p').get_text().replace(f"{symbol} ", "")
     except:
         unicode_name = ""
 
@@ -93,7 +96,7 @@ def search(emoji: str) -> dict:
         vendors = dict()
 
     emoji_info = {
-        'emoji': emoji,
+        'symbol': symbol,
         'description': description,
         'name': name,
         'aliases': aliases,

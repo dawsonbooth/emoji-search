@@ -12,6 +12,8 @@ def main():
                        help='Emoji to search for')
     group.add_argument('--category', type=str, required=False, default="",
                        help='Category to get list of emojis')
+    group.add_argument('--categories', required=False, action='store_true', default=False,
+                       help='Get list of emoji categories')
     group.add_argument('--all', required=False, action='store_true', default=False,
                        help='Get palette of all categories and their emojis')
 

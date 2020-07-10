@@ -2,7 +2,7 @@ from typing import List
 
 
 class Emoji:
-    __slots__ = 'emoji', 'description', 'name', 'aliases', 'apple_name', 'unicode_name', 'vendors'
+    __slots__ = 'symbol', 'description', 'name', 'aliases', 'apple_name', 'unicode_name', 'vendors'
 
     def __init__(self, **kwargs):
         for (key, value) in kwargs.items():
