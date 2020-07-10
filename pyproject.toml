@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "emoji-search"
-version = "1.0.0"
-description = ""
+version = "1.0.1"
+description = "The #1 Python tool for miscellaneous emoji info"
 authors = ["Dawson Booth <pypi@dawsonbooth.com>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/dawsonbooth/emoji-search"
 repository = "https://github.com/dawsonbooth/emoji-search"
-keywords = []
+keywords = ["cli", "console", "emoji", "unicode", "emoticon", "emojipedia", "scrape", "web", "search"]
 classifiers = [
     "Environment :: Console",
     "Programming Language :: Python :: 3",
