@@ -1,0 +1,16 @@
+site_name: emoji-search
+nav:
+  - Overview: README.md
+  - Documentation: documentation.md
+repo_url: https://github.com/dawsonbooth/emoji-search/
+site_url: https://dawsonbooth.github.io/emoji-search/
+
+markdown_extensions:
+  - toc:
+      permalink: 🔗
+
+theme:
+  name: readthedocs
+
+plugins:
+  - mkdocstrings

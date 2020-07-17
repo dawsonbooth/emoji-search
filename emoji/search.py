@@ -8,6 +8,8 @@ from .emoji import Emoji, categories
 
 
 def category(category: str) -> List[str]:
+    """Get list of emojis in the given category"""
+
     emoji_url = f"https://emojipedia.org/{category}"
 
     page = requests.get(emoji_url)
@@ -25,10 +27,14 @@ def category(category: str) -> List[str]:
 
 
 def palette() -> dict:
+    """Get dict of all categories and their corresponding emojis"""
+
     return dict([(c, category(c)) for c in categories])
 
 
-def search(emoji: str) -> dict:
+def search(emoji: str) -> Emoji:
+    """Get Emoji instance from given emoji string"""
+
     emoji_url = f"https://emojipedia.org/{urllib.parse.quote(emoji)}"
 
     page = requests.get(emoji_url)
