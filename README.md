@@ -32,7 +32,9 @@ def random_emoji() -> Emoji:
 
 print(random_emoji())
 ```
-
+```txt
+🤯
+```
 You can also run the tool from the command-line:
 
 ```txt
