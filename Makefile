@@ -14,15 +14,23 @@ clean:
 	rm -rf build/ dist/ **/__pycache__/
 	rm -f *.spec **/*.pyc
 
-build: clean
-	@poetry build
+lint:
+	@poetry run pylint emoji
 
-docs: build
+test:
+	@poetry run pytest emoji/test.py
+
+docs:
+	@poetry run pydoc-markdown -p emoji > docs/documentation.md
 	@poetry run mkdocs build --clean
 
-publish: clean build docs
-	@mkdocs gh-deploy
+build:
+	@poetry build
+
+publish:
+	@poetry run mkdocs gh-deploy
 	@poetry publish
 
 version:
 	@echo $(VERSION)
+	

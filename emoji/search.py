@@ -2,7 +2,7 @@ import urllib.parse
 from typing import Dict, List
 
 import requests
-from bs4 import BeautifulSoup, SoupStrainer
+from bs4 import BeautifulSoup
 
 from .emoji import Emoji, categories
 
