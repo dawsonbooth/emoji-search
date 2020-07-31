@@ -22,6 +22,7 @@ test:
 
 docs:
 	@poetry run pydoc-markdown -p emoji > docs/documentation.md
+	@cp README.md docs/README.md
 	@poetry run mkdocs build --clean
 
 build:
