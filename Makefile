@@ -1,6 +1,6 @@
 VERSION := $(shell poetry version | grep -oE '[^ ]+$$')
 
-.PHONY: all list clean docs publish version
+.PHONY: all list clean lint test docs build publish version
 
 all: list
 
