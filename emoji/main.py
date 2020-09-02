@@ -1,7 +1,7 @@
 import argparse
 import json
 
-from emoji import Emoji, categories, category, palette, search
+from . import Emoji, categories, category, palette, search
 
 
 def main():

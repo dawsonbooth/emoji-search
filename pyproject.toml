@@ -22,7 +22,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-emoji-search = 'console:main'
+emoji-search = 'emoji.main:main'
 
 [tool.poetry.dependencies]
 python = "^3.6"
