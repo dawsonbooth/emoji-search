@@ -1,3 +1,10 @@
+
+Python 2.7 will no longer be supported in the next feature release of Poetry (1.2).
+You should consider updating your Python version to a supported one.
+
+Note that you will still be able to manage Python 2.7 projects by using the env command.
+See https://python-poetry.org/docs/managing-environments/ for more information.
+
 <a name="emoji"></a>
 # emoji
 
@@ -45,4 +52,7 @@ search(emoji: str) -> Emoji
 ```
 
 Get Emoji instance from given emoji string
+
+<a name="emoji.main"></a>
+# emoji.main
 
