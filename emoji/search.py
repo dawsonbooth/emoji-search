@@ -45,8 +45,9 @@ def search(emoji: str) -> Emoji:
     name: str
     try:
         heading = soup.find('article').find('h1').get_text()
-        symbol = heading[0]
-        name = heading[2:]
+        split_heading = heading.split()
+        symbol = split_heading[0]
+        name = ' '.join(split_heading[1:])
     except:
         symbol = ""
         name = ""
