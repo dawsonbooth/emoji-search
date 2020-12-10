@@ -38,7 +38,7 @@ print(random_emoji())
 You can also run the tool from the command-line:
 
 ```txt
-usage: console.py [-h] [--search SEARCH | --category CATEGORY | --categories | --palette]
+usage: emoji-search [-h] [--search SEARCH | --category CATEGORY | --categories | --palette]
 
 Search for emoji information
 
