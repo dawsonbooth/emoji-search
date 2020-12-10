@@ -1,10 +1,10 @@
 import argparse
 import json
 
-from . import Emoji, categories, category, palette, search
+from . import categories, category, palette, search
 
 
-def main():
+def main() -> int:
     parser = argparse.ArgumentParser(
         description='Search for emoji information')
     group = parser.add_mutually_exclusive_group()
@@ -29,7 +29,10 @@ def main():
         print(categories)
     else:
         parser.error("Invalid command")
+        return 1
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    exit(main())
